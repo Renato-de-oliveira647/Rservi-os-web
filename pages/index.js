@@ -1,5 +1,9 @@
+"use client";
+
 import {filmes} from "../data/filmes.js"
 import CardFilme from "../components/CardFilme"
+
+console.log(process.env.NEXT_PUBLIC_TMDB_API_KEY)
 
 function home () {
    
@@ -9,6 +13,15 @@ function home () {
         gap:'16px',
         listStyle:'none'
     }
+    const urlvamoschamar=
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&language=pt-BR&page=1`
+
+    let resposta= null;
+
+    fetch( urlvamoschamar).then(res=>{resposta=res});
+
+    console.log(resposta)
+    
     return <>
         <h1>filmes</h1>
 
