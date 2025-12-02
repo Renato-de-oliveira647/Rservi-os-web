@@ -18,9 +18,12 @@ function home () {
 
     let resposta= null;
 
-    fetch( urlvamoschamar).then(res=>{resposta=res});
+    fetch( urlvamoschamar).then(res=>{ 
+        resposta=res
+        console.log(resposta)
+    });
 
-    console.log(resposta)
+   
     
     return <>
         <h1>filmes</h1>
