@@ -20,7 +20,7 @@ function home () {
 
     fetch( urlvamoschamar).then(res=>{ 
         resposta=res
-        console.log(resposta)
+        console.log(res.json())
     });
 
    
